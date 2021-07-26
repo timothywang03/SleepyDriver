@@ -105,7 +105,7 @@ def main():
                     eye = cv2.drawKeypoints(eye, keypoints, eye, (0, 255, 255),
                                             cv2.DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS)
 
-            if eyes[0] is None and eyes[1] is None:
+            if eyes[0] is None or eyes[1] is None:
                 if attention is True:
                     time_since_attention = time.time()
                 attention = False
